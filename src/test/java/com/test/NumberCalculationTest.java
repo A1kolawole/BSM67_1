@@ -51,11 +51,11 @@ public class NumberCalculationTest {
 	
 	@Test
 	void testDivideWithException() {
-		assertThrows(ArithmeticException.class, ()-> nc.divide(1, 1), "denominator should not be zero");
+		assertThrows(ArithmeticException.class, ()-> nc.divide(1, 0), "denominator should not be zero");
 	}
 	
 	@Test
 	void testDivideWithoutException() {
-		assertEquals(nc.divide(1, 0), 1);
+		assertEquals(nc.divide(1, 1), 1);
 	}
 }
